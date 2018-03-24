@@ -16,9 +16,11 @@ def main():
     plt.plot(x, history['val_acc'], 'r-', label='val_acc', linewidth=.5)
     plt.legend(loc='lower right')
     plt.ylim([0.8, 1.0])
+    plt.ylabel('acc')
     plt.xlim([0, 200])
+    plt.xlabel('epoch')
     plt.grid(which='major', color='black', linestyle='--')
-    plt.subplots_adjust(left=.1, right=.95, bottom=.1, top=.95)
+    plt.subplots_adjust(left=.15, right=.95, bottom=.15, top=.95)
     path = f'figure/resnet_cifar10_history.png'
     if not os.path.exists(os.path.dirname(path)):
         os.makedirs(os.path.dirname(path))
